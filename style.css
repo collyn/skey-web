@@ -126,13 +126,15 @@ section p {
   color: var(--text-secondary);
 }
 
-section ul, section ol {
+section ul,
+section ol {
   padding-left: 1.5rem;
   margin-bottom: 0.85rem;
   color: var(--text-secondary);
 }
 
-section ul li, section ol li {
+section ul li,
+section ol li {
   margin-bottom: 0.35rem;
 }
 
@@ -148,11 +150,10 @@ section ul li, section ol li {
   padding: 3rem 4.5rem;
 }
 
-.main-content > section > p,
+/* .main-content>section>p,
 .main-content .alert,
-.main-content .steps > li {
-  max-width: 82ch;
-}
+.main-content .steps>li {
+  /* max-width: 82ch; */
 
 /* Modern Flat Sidebar */
 .sidebar {
@@ -805,11 +806,11 @@ figure.screenshot-inline figcaption {
     transform: translateX(-100%);
     transition: transform 0.25s ease;
   }
-  
+
   .sidebar.open {
     transform: translateX(0);
   }
-  
+
   .sidebar-overlay {
     display: none;
     position: fixed;
@@ -821,11 +822,11 @@ figure.screenshot-inline figcaption {
     backdrop-filter: blur(4px);
     z-index: 99;
   }
-  
+
   .sidebar-overlay.active {
     display: block;
   }
-  
+
   .main-content {
     margin-left: 0;
     padding: 1.5rem 1.25rem;
@@ -834,7 +835,7 @@ figure.screenshot-inline figcaption {
   .features-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .hamburger {
     display: flex;
     position: fixed;
@@ -852,7 +853,7 @@ figure.screenshot-inline figcaption {
     justify-content: center;
     gap: 5px;
   }
-  
+
   .hamburger span {
     display: block;
     width: 20px;
@@ -860,15 +861,15 @@ figure.screenshot-inline figcaption {
     background: #ffffff;
     transition: all 0.25s;
   }
-  
+
   .hamburger.active span:nth-child(1) {
     transform: rotate(45deg) translateY(7px);
   }
-  
+
   .hamburger.active span:nth-child(2) {
     opacity: 0;
   }
-  
+
   .hamburger.active span:nth-child(3) {
     transform: rotate(-45deg) translateY(-7px);
   }
