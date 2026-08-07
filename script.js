@@ -200,8 +200,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 8. Auto Fetch Contributors from GitHub API
   async function fetchContributors() {
-    const container = document.getElementById('sidebar-contributors');
-    if (!container) return;
+    const sidebarContainer = document.getElementById('sidebar-contributors');
+    const gridContainer = document.getElementById('contributors-grid');
 
     try {
       const response = await fetch('https://api.github.com/repos/collyn/skey/contributors');
@@ -209,12 +209,28 @@ document.addEventListener('DOMContentLoaded', () => {
       const contributors = await response.json();
 
       if (Array.isArray(contributors) && contributors.length > 0) {
-        container.innerHTML = contributors.map(user => `
-          <a href="${user.html_url}" target="_blank" rel="noopener" class="contributor-item">
-            <img src="${user.avatar_url}" alt="${user.login}" class="contributor-avatar">
-            <span class="contributor-name">${user.login}</span>
-          </a>
-        `).join('');
+        // Populate Sidebar mini list
+        if (sidebarContainer) {
+          sidebarContainer.innerHTML = contributors.map(user => `
+            <a href="${user.html_url}" target="_blank" rel="noopener" class="contributor-item">
+              <img src="${user.avatar_url}" alt="${user.login}" class="contributor-avatar">
+              <span class="contributor-name">${user.login}</span>
+            </a>
+          `).join('');
+        }
+
+        // Populate Main Content section grid
+        if (gridContainer) {
+          gridContainer.innerHTML = contributors.map(user => `
+            <a href="${user.html_url}" target="_blank" rel="noopener" class="contributor-card">
+              <img src="${user.avatar_url}" alt="${user.login}" class="contributor-card-avatar">
+              <div class="contributor-card-info">
+                <span class="contributor-card-name">${user.login}</span>
+                <span class="contributor-card-contributions">${user.contributions} đóng góp (commits)</span>
+              </div>
+            </a>
+          `).join('');
+        }
       }
     } catch (error) {
       console.error('Failed to fetch contributors:', error);
