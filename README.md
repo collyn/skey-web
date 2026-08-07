@@ -1,6 +1,6 @@
 # skey-web
 
-Đây là trang web hướng dẫn sử dụng và giới thiệu cho bộ gõ tiếng Việt [skey](https://github.com/collyn/skey).
+Đây là trang web hướng dẫn sử dụng và giới thiệu cho [Skey bộ gõ tiếng Việt tốt nhất cho Linux](https://github.com/collyn/skey).
 
 ## 📌 Giới thiệu
 
