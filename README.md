@@ -1,48 +1,34 @@
 # skey-web
 
-Đây là trang web hướng dẫn sử dụng và giới thiệu cho [Skey bộ gõ tiếng Việt tốt nhất cho Linux](https://github.com/collyn/skey).
+Mã nguồn trang web giới thiệu và hướng dẫn sử dụng cho [Skey - bộ gõ tiếng Việt tốt nhất cho Linux](https://github.com/collyn/skey).
 
-## 📌 Giới thiệu
+## Giới thiệu
 
-`skey-web` là dự án web giúp người dùng trải nghiệm, tra cứu cú pháp và xem hướng dẫn cài đặt / cấu hình cho công cụ gõ tiếng Việt `skey`.
+Trang web giúp người dùng dễ dàng tra cứu cách cài đặt, cấu hình và xem hướng dẫn chi tiết các tính năng của Skey trên các hệ điều hành Linux (Ubuntu, Arch, Fedora...).
 
-- **Mã nguồn bộ gõ chính (Core Engine):** [https://github.com/collyn/skey](https://github.com/collyn/skey)
-- **Trang web chính thức:** [https://collyn.github.io/skey-web/](https://collyn.github.io/skey-web/)
+- Trang web: https://collyn.github.io/skey-web/
+- Bộ gõ chính (Skey): https://github.com/collyn/skey
 
----
-
-## 🚀 Tính năng của Web Hướng Dẫn
-
-- **Hướng dẫn cài đặt & cấu hình:** Chi tiết các bước thiết lập `skey` trên các hệ điều hành.
-- **Tra cứu phím tắt & tính năng:** Danh sách đầy đủ các phím tắt, bảng mã và tùy chọn của `skey`.
-
----
-
-## 🛠 Cấu trúc dự án Web
-
-```text
-.
-├── index.html        # Trang giao diện chính
-├── style.css         # Styling giao diện
-├── script.js         # Logic tương tác và xử lý gõ demo trên web
-└── README.md         # Tài liệu dự án
-```
-
----
-
-## 💻 Phát triển cục bộ (Local Development)
+## Chạy dự án ở local
 
 Yêu cầu đã cài đặt [Bun](https://bun.sh/).
 
-Bạn có thể chạy server phát triển cục bộ bằng Bun:
+Khởi chạy web server ở máy local:
 
 ```bash
-# Chạy static server bằng Bun
 bun x serve .
 ```
 
----
+## Cấu trúc thư mục
 
-## 📜 Giấy phép (License)
+```text
+.
+├── index.html    # Trang chủ
+├── style.css     # CSS
+├── script.js     # Script xử lý giao diện
+└── README.md
+```
 
-Dự án tuân theo giấy phép mã nguồn mở của [skey](https://github.com/collyn/skey).
+## License
+
+Dự án sử dụng chung giấy phép mã nguồn mở với [skey](https://github.com/collyn/skey).
