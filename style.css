@@ -766,7 +766,8 @@ figure.screenshot figcaption {
 
 /* Inline Screenshots */
 figure.screenshot-inline {
-  margin: 1.5rem 0;
+  margin: 1.5rem auto;
+  max-width: 420px;
   border-radius: var(--radius-md);
   overflow: hidden;
   border: 1px solid var(--border);
@@ -776,10 +777,9 @@ figure.screenshot-inline {
 figure.screenshot-inline img {
   display: block;
   width: 100%;
-  max-width: 700px;
   height: auto;
+  margin: 0 auto;
   background: var(--bg-alt);
-  min-height: 120px;
   object-fit: contain;
 }
 
@@ -790,6 +790,7 @@ figure.screenshot-inline figcaption {
   border-top: 1px solid var(--border);
   background: var(--bg-card);
   font-weight: 500;
+  text-align: center;
 }
 
 /* Mobile Hamburger & Overlay */
