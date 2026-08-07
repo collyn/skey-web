@@ -178,4 +178,50 @@ document.addEventListener('DOMContentLoaded', () => {
       img.replaceWith(placeholder);
     });
   });
+
+  // 7. Auto Fetch Latest Version from GitHub Releases API
+  async function fetchLatestVersion() {
+    try {
+      const response = await fetch('https://api.github.com/repos/collyn/skey/releases/latest');
+      if (!response.ok) return;
+      const data = await response.json();
+      const latestTag = data.tag_name;
+      if (latestTag) {
+        document.querySelectorAll('[data-skey-version]').forEach(el => {
+          el.textContent = latestTag;
+        });
+      }
+    } catch (error) {
+      console.error('Failed to fetch latest version tag:', error);
+    }
+  }
+
+  fetchLatestVersion();
+
+  // 8. Auto Fetch Contributors from GitHub API
+  async function fetchContributors() {
+    const container = document.getElementById('sidebar-contributors');
+    if (!container) return;
+
+    try {
+      const response = await fetch('https://api.github.com/repos/collyn/skey/contributors');
+      if (!response.ok) return;
+      const contributors = await response.json();
+
+      if (Array.isArray(contributors) && contributors.length > 0) {
+        container.innerHTML = contributors.map(user => `
+          <a href="${user.html_url}" target="_blank" rel="noopener" class="contributor-item">
+            <img src="${user.avatar_url}" alt="${user.login}" class="contributor-avatar">
+            <span class="contributor-name">${user.login}</span>
+          </a>
+        `).join('');
+      }
+    } catch (error) {
+      console.error('Failed to fetch contributors:', error);
+    }
+  }
+
+  fetchContributors();
 });
+
+

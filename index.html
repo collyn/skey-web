@@ -1,19 +1,48 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SKey — Bộ gõ Tiếng Việt cho Linux</title>
-  <meta name="description" content="Hướng dẫn cài đặt và sử dụng SKey — bộ gõ Tiếng Việt đơn giản, nhẹ, và nhanh cho Linux trên nền tảng Fcitx5. Hỗ trợ Ubuntu, Fedora, Arch Linux, X11 và Wayland.">
-  <meta name="keywords" content="SKey, bộ gõ tiếng Việt, Linux, fcitx5, Telex, VNI, Vietnamese input method, Ubuntu, Fedora, Arch Linux">
-  <meta property="og:title" content="SKey — Bộ gõ Tiếng Việt cho Linux">
-  <meta property="og:description" content="Hướng dẫn cài đặt SKey — bộ gõ Tiếng Việt đơn giản, nhẹ, nhanh cho Linux.">
+  <title>SKey — Bộ gõ Tiếng Việt tốt nhất cho Linux (Gõ không gạch chân)</title>
+  <meta name="description"
+    content="SKey là bộ gõ Tiếng Việt tốt nhất cho Linux hỗ trợ gõ không gạch chân (Non-preedit via Surrounding Text). Đơn giản, nhẹ, nhanh cho Fcitx5 trên Ubuntu, Fedora, Arch Linux, X11 và Wayland.">
+  <meta name="keywords"
+    content="SKey, bộ gõ tiếng Việt tốt nhất cho Linux, gõ tiếng Việt không gạch chân cho Linux, fcitx5, Telex, VNI, Vietnamese input method Linux, Ubuntu, Fedora, Arch Linux">
+  <meta property="og:title" content="SKey — Bộ gõ Tiếng Việt tốt nhất cho Linux (Gõ không gạch chân)">
+  <meta property="og:description" content="SKey — Bộ gõ Tiếng Việt tốt nhất cho Linux. Hỗ trợ gõ tiếng Việt không gạch chân, mượt mà trên Ubuntu, Fedora, Arch, X11 & Wayland.">
   <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SKey — Bộ gõ Tiếng Việt tốt nhất cho Linux">
+  <meta name="twitter:description" content="Bộ gõ Tiếng Việt không gạch chân (Non-preedit) hiện đại và phản hồi nhanh nhất cho Linux.">
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "SKey",
+    "operatingSystem": "Linux (Ubuntu, Fedora, Arch Linux, Debian, openSUSE)",
+    "applicationCategory": "UtilitiesApplication",
+    "description": "SKey là bộ gõ Tiếng Việt tốt nhất cho Linux hỗ trợ gõ tiếng Việt không gạch chân (Non-preedit) trên nền tảng Fcitx5.",
+    "license": "https://opensource.org/licenses/MIT",
+    "url": "https://github.com/collyn/skey",
+    "author": {
+      "@type": "Person",
+      "name": "collyn",
+      "url": "https://github.com/collyn"
+    }
+  }
+  </script>
+
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
 </head>
+
 <body>
 
   <!-- Hamburger (mobile) -->
@@ -30,17 +59,19 @@
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" class="sidebar-logo">
         <defs>
           <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#3b82f6"/>
-            <stop offset="100%" stop-color="#1d4ed8"/>
+            <stop offset="0%" stop-color="#3b82f6" />
+            <stop offset="100%" stop-color="#1d4ed8" />
           </linearGradient>
         </defs>
-        <rect x="2" y="2" width="44" height="44" rx="8" ry="8" fill="url(#bg)"/>
-        <text x="24" y="33" font-family="sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="white">Vi</text>
+        <rect x="2" y="2" width="44" height="44" rx="8" ry="8" fill="url(#bg)" />
+        <text x="24" y="33" font-family="sans-serif" font-size="24" font-weight="bold" text-anchor="middle"
+          fill="white">Vi</text>
       </svg>
       <h1>SKey</h1>
       <p>Simple Key for Linux</p>
       <div class="sidebar-badges">
         <a href="https://github.com/collyn/skey/releases" target="_blank" rel="noopener">Releases</a>
+        <a href="https://github.com/collyn/skey/releases" target="_blank" rel="noopener" data-skey-version>v0.5.3</a>
         <a href="https://github.com/collyn/skey" target="_blank" rel="noopener">MIT</a>
       </div>
     </div>
@@ -61,9 +92,18 @@
 
       <span class="nav-section">Tham khảo</span>
       <a href="#su-dung" class="nav-link">Sử dụng cơ bản</a>
+
+      <span class="nav-section">Contributors</span>
+      <div class="sidebar-contributors" id="sidebar-contributors">
+        <a href="https://github.com/collyn" target="_blank" rel="noopener" class="contributor-item">
+          <img src="https://avatars.githubusercontent.com/u/13034759?v=4" alt="collyn" class="contributor-avatar">
+          <span class="contributor-name">collyn</span>
+        </a>
+      </div>
     </nav>
     <div class="sidebar-footer">
       <a href="https://github.com/collyn/skey" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://github.com/collyn/skey" target="_blank" rel="noopener" data-skey-version>v0.5.3</a>
       <a href="https://github.com/collyn/skey/releases" target="_blank" rel="noopener">Releases</a>
     </div>
   </aside>
@@ -73,31 +113,38 @@
 
     <!-- ==================== GIỚI THIỆU ==================== -->
     <section id="gioi-thieu">
-      <h1>Tính năng nổi bật</h1>
+      <h1>SKey — Bộ gõ Tiếng Việt tốt nhất cho Linux</h1>
+      <p style="font-size: 1.05rem; color: var(--text-secondary); margin-top: 0.25rem; margin-bottom: 1.25rem;">Giải pháp <strong>gõ tiếng Việt không gạch chân cho Linux</strong> chuẩn Fcitx5 — Phản hồi tức thì, mượt mà như bộ gõ native.</p>
       <div class="features-grid">
         <div class="feature-item">
-          <h3>Gõ không gạch chân (Non-preedit)</h3>
-          <p>Mặc định gõ trực tiếp không gạch chân qua Surrounding Text. Ký tự xuất hiện ngay lập tức, mang lại cảm giác gõ native 100%.</p>
+          <h3>Gõ tiếng Việt không gạch chân cho Linux</h3>
+          <p>Mặc định gõ trực tiếp không gạch chân (Non-preedit) qua Surrounding Text. Ký tự xuất hiện ngay lập tức, mang lại cảm giác gõ native 100%.</p>
         </div>
         <div class="feature-item">
           <h3>Gõ tự do kiểu UniKey</h3>
-          <p>Double-letter transform (<code>dd</code>→<code>đ</code>, <code>oo</code>→<code>ô</code>) mọi vị trí. Đổi dấu liên tục, viết tắt (<code>vcđ</code>, <code>nđm</code>) thoải mái.</p>
+          <p>Double-letter transform (<code>dd</code>→<code>đ</code>, <code>oo</code>→<code>ô</code>) mọi vị trí. Đổi
+            dấu liên tục, viết tắt (<code>vcđ</code>, <code>nđm</code>) thoải mái.</p>
         </div>
         <div class="feature-item">
           <h3>Auto Mode thông minh</h3>
-          <p>Tự động chọn Surrounding Text hoặc Uinput dựa trên ứng dụng. Nhận diện terminal, Electron, Chromium — không cần cấu hình.</p>
+          <p>Tự động chọn Surrounding Text hoặc Uinput dựa trên ứng dụng. Nhận diện terminal, Electron, Chromium — không
+            cần cấu hình.</p>
         </div>
         <div class="feature-item">
           <h3>Support nhiều nền tảng</h3>
-          <p>Hoạt động trên cả X11 và Wayland. Hỗ trợ KDE Plasma, GNOME, Hyprland, Sway, Niri. Cài đặt trên Ubuntu, Fedora, Arch.</p>
+          <p>Hoạt động trên cả X11 và Wayland. Hỗ trợ KDE Plasma, GNOME, Hyprland, Sway, Niri. Cài đặt trên Ubuntu,
+            Fedora, Arch.</p>
         </div>
         <div class="feature-item">
           <h3>Nhẹ và nhanh</h3>
-          <p>Engine <a href="https://github.com/nguyen10t2/bamboo_core" target="_blank" rel="noopener">bamboo-core</a> (Rust) qua FFI. Chạy monolithic không daemon. Adaptive delay cho Uinput — không mất chữ.</p>
+          <p>Engine <a href="https://github.com/nguyen10t2/bamboo_core" target="_blank" rel="noopener">bamboo-core</a>
+            (Rust) qua FFI. Chạy monolithic không daemon. Adaptive delay cho Uinput — không mất chữ.</p>
         </div>
         <div class="feature-item">
           <h3>Cấu hình &amp; cập nhật dễ dàng</h3>
-          <p>Settings GUI (Qt6) trực quan. Cập nhật phiên bản mới chỉ 2 click trong GUI, hoặc qua <code>apt</code> / <code>dnf</code> / <code>pacman</code>.</p>
+          <p>Settings GUI (Qt6) trực quan. Cập nhật phiên bản mới chỉ 2 click trong GUI, hoặc qua <code>apt</code> /
+            <code>dnf</code> / <code>pacman</code>.
+          </p>
         </div>
       </div>
     </section>
@@ -107,7 +154,10 @@
     <!-- ==================== CÀI ĐẶT UBUNTU / DEBIAN ==================== -->
     <section id="cai-dat-ubuntu">
       <h1>Cài đặt — Ubuntu / Debian</h1>
-      <p>Hướng dẫn này áp dụng cho <strong>Ubuntu</strong> (bao gồm cả GNOME, Kubuntu, Xubuntu, Lubuntu), <strong>Linux Mint</strong>, <strong>Zorin OS</strong>, <strong>Pop!_OS</strong>, <strong>elementary OS</strong>, <strong>Debian</strong>, và tất cả các bản phân phối dựa trên Debian.</p>
+      <p>Hướng dẫn này áp dụng cho <strong>Ubuntu</strong> (bao gồm cả GNOME, Kubuntu, Xubuntu, Lubuntu), <strong>Linux
+          Mint</strong>, <strong>Zorin OS</strong>, <strong>Pop!_OS</strong>, <strong>elementary OS</strong>,
+        <strong>Debian</strong>, và tất cả các bản phân phối dựa trên Debian.
+      </p>
 
       <h2>Cách 1: APT Repository (khuyến nghị)</h2>
       <p>Thêm repository chính thức để nhận cập nhật tự động qua <code>apt update</code>:</p>
@@ -116,7 +166,8 @@
       <div class="code-block">
         <div class="code-header">
           <span>Terminal</span>
-          <button class="copy-btn" data-code="curl -fsSL https://collyn.github.io/skey/install.sh | sudo bash">Copy</button>
+          <button class="copy-btn"
+            data-code="curl -fsSL https://collyn.github.io/skey/install.sh | sudo bash">Copy</button>
         </div>
         <pre><code>curl -fsSL https://collyn.github.io/skey/install.sh | sudo bash</code></pre>
       </div>
@@ -130,15 +181,18 @@
         <pre><code>sudo apt install fcitx5-skey</code></pre>
       </div>
 
-      <p>Sau khi cài, SKey tự động chạy <code>skey-setup</code> để cấu hình mọi thứ. Bộ gõ sẵn sàng sử dụng — chuyển đổi bằng <kbd>Ctrl</kbd>+<kbd>Space</kbd>.</p>
+      <p>Sau khi cài, SKey tự động chạy <code>skey-setup</code> để cấu hình mọi thứ. Bộ gõ sẵn sàng sử dụng — chuyển đổi
+        bằng <kbd>Ctrl</kbd>+<kbd>Space</kbd>.</p>
 
       <div class="alert alert-warning">
         <div class="alert-title">Lưu ý cho Wayland</div>
-        Sau khi cài, bạn cần chọn Virtual Keyboard là <strong>Fcitx 5</strong> trong System Settings. Xem chi tiết ở phần <a href="#cau-hinh-fcitx5">Cấu hình Fcitx5</a>.
+        Sau khi cài, bạn cần chọn Virtual Keyboard là <strong>Fcitx 5</strong> trong System Settings. Xem chi tiết ở
+        phần <a href="#cau-hinh-fcitx5">Cấu hình Fcitx5</a>.
       </div>
 
       <h2>Cách 2: Từ file .deb</h2>
-      <p>Nếu không muốn thêm repository, bạn có thể tải trực tiếp file <code>.deb</code> từ <a href="https://github.com/collyn/skey/releases" target="_blank" rel="noopener">GitHub Releases</a>:</p>
+      <p>Nếu không muốn thêm repository, bạn có thể tải trực tiếp file <code>.deb</code> từ <a
+          href="https://github.com/collyn/skey/releases" target="_blank" rel="noopener">GitHub Releases</a>:</p>
 
       <div class="code-block">
         <div class="code-header">
@@ -154,7 +208,8 @@ skey-setup                 # cấu hình fcitx5</code></pre>
 
       <div class="alert alert-tip">
         <div class="alert-title">Mẹo</div>
-        Cách 1 (APT Repository) được khuyến nghị vì bạn sẽ nhận cập nhật tự động mỗi khi chạy <code>sudo apt update && sudo apt upgrade</code>.
+        Cách 1 (APT Repository) được khuyến nghị vì bạn sẽ nhận cập nhật tự động mỗi khi chạy
+        <code>sudo apt update && sudo apt upgrade</code>.
       </div>
     </section>
 
@@ -163,7 +218,8 @@ skey-setup                 # cấu hình fcitx5</code></pre>
     <!-- ==================== CÀI ĐẶT FEDORA ==================== -->
     <section id="cai-dat-fedora">
       <h1>Cài đặt — Fedora</h1>
-      <p>Hướng dẫn này áp dụng cho <strong>Fedora Workstation</strong> (GNOME) và <strong>Fedora KDE Spin</strong>. Cũng hoạt động trên <strong>openSUSE</strong> (xem tab bên dưới).</p>
+      <p>Hướng dẫn này áp dụng cho <strong>Fedora Workstation</strong> (GNOME) và <strong>Fedora KDE Spin</strong>. Cũng
+        hoạt động trên <strong>openSUSE</strong> (xem tab bên dưới).</p>
 
       <!-- Distro tabs: Fedora vs openSUSE -->
       <div class="distro-tabs">
@@ -176,7 +232,8 @@ skey-setup                 # cấu hình fcitx5</code></pre>
         <div class="code-block">
           <div class="code-header">
             <span>Terminal</span>
-            <button class="copy-btn" data-code="curl -fsSL https://collyn.github.io/skey/install-fedora.sh | sudo bash">Copy</button>
+            <button class="copy-btn"
+              data-code="curl -fsSL https://collyn.github.io/skey/install-fedora.sh | sudo bash">Copy</button>
           </div>
           <pre><code>curl -fsSL https://collyn.github.io/skey/install-fedora.sh | sudo bash</code></pre>
         </div>
@@ -201,7 +258,8 @@ skey-setup                 # cấu hình fcitx5</code></pre>
 
         <div class="alert alert-note">
           <div class="alert-title">Ghi chú</div>
-          Fedora mặc định dùng Wayland. Sau khi cài, nhớ vào <strong>Settings → Keyboard → Input Sources</strong> chọn <strong>Vietnamese (Fcitx 5)</strong>. Xem chi tiết ở phần <a href="#cau-hinh-fcitx5">Cấu hình Fcitx5</a>.
+          Fedora mặc định dùng Wayland. Sau khi cài, nhớ vào <strong>Settings → Keyboard → Input Sources</strong> chọn
+          <strong>Vietnamese (Fcitx 5)</strong>. Xem chi tiết ở phần <a href="#cau-hinh-fcitx5">Cấu hình Fcitx5</a>.
         </div>
 
         <p>Cập nhật tự động qua:</p>
@@ -219,7 +277,8 @@ skey-setup                 # cấu hình fcitx5</code></pre>
         <div class="code-block">
           <div class="code-header">
             <span>Terminal</span>
-            <button class="copy-btn" data-code="curl -fsSL https://collyn.github.io/skey/install-opensuse.sh | sudo bash">Copy</button>
+            <button class="copy-btn"
+              data-code="curl -fsSL https://collyn.github.io/skey/install-opensuse.sh | sudo bash">Copy</button>
           </div>
           <pre><code>curl -fsSL https://collyn.github.io/skey/install-opensuse.sh | sudo bash</code></pre>
         </div>
@@ -258,13 +317,16 @@ skey-setup                 # cấu hình fcitx5</code></pre>
     <!-- ==================== CÀI ĐẶT ARCH LINUX ==================== -->
     <section id="cai-dat-arch">
       <h1>Cài đặt — Arch Linux</h1>
-      <p>Hướng dẫn này áp dụng cho <strong>Arch Linux</strong>, <strong>Manjaro</strong>, <strong>EndeavourOS</strong>, <strong>CachyOS</strong>, và các bản phân phối dựa trên Arch.</p>
+      <p>Hướng dẫn này áp dụng cho <strong>Arch Linux</strong>, <strong>Manjaro</strong>, <strong>EndeavourOS</strong>,
+        <strong>CachyOS</strong>, và các bản phân phối dựa trên Arch.
+      </p>
 
       <p><strong>Bước 1:</strong> Thêm repository:</p>
       <div class="code-block">
         <div class="code-header">
           <span>Terminal</span>
-          <button class="copy-btn" data-code="curl -fsSL https://collyn.github.io/skey/install-arch.sh | sudo bash">Copy</button>
+          <button class="copy-btn"
+            data-code="curl -fsSL https://collyn.github.io/skey/install-arch.sh | sudo bash">Copy</button>
         </div>
         <pre><code>curl -fsSL https://collyn.github.io/skey/install-arch.sh | sudo bash</code></pre>
       </div>
@@ -298,7 +360,8 @@ skey-setup                 # cấu hình fcitx5</code></pre>
 
       <div class="alert alert-note">
         <div class="alert-title">GPG Key</div>
-        Tất cả repository (APT, RPM, Arch) dùng chung GPG key. Public key tại: <code>https://collyn.github.io/skey/key.asc</code>
+        Tất cả repository (APT, RPM, Arch) dùng chung GPG key. Public key tại:
+        <code>https://collyn.github.io/skey/key.asc</code>
       </div>
     </section>
 
@@ -344,7 +407,8 @@ skey-setup                 # cấu hình fcitx5</code></pre>
 
         <div class="alert alert-warning">
           <div class="alert-title">Rust Toolchain</div>
-          Trên Ubuntu &lt; 24.04, gói <code>rustc</code>/<code>cargo</code> từ apt quá cũ. Cài qua <strong>rustup</strong>:
+          Trên Ubuntu &lt; 24.04, gói <code>rustc</code>/<code>cargo</code> từ apt quá cũ. Cài qua
+          <strong>rustup</strong>:
           <div class="code-block" style="margin-top: 0.5rem">
             <div class="code-header">
               <span>Terminal</span>
@@ -432,7 +496,8 @@ source "$HOME/.cargo/env"</code></pre>
 
       <div class="alert alert-note">
         <div class="alert-title">Ghi chú về Rust</div>
-        Nếu <code>rust</code>/<code>cargo</code> từ repo distro quá cũ (Rust ≥ 1.70 được khuyến nghị), cài qua <a href="https://rustup.rs" target="_blank" rel="noopener">rustup</a>:
+        Nếu <code>rust</code>/<code>cargo</code> từ repo distro quá cũ (Rust ≥ 1.70 được khuyến nghị), cài qua <a
+          href="https://rustup.rs" target="_blank" rel="noopener">rustup</a>:
         <div class="code-block" style="margin-top: 0.5rem">
           <div class="code-header">
             <span>Terminal</span>
@@ -464,7 +529,8 @@ sudo cmake --install build</code></pre>
 
       <div class="alert alert-tip">
         <div class="alert-title">Mẹo</div>
-        Nếu không cài <code>qt6-base-dev</code>, CMake sẽ tự động bỏ qua Settings GUI và chỉ build engine core + uinput server. Settings GUI không bắt buộc để sử dụng SKey.
+        Nếu không cài <code>qt6-base-dev</code>, CMake sẽ tự động bỏ qua Settings GUI và chỉ build engine core + uinput
+        server. Settings GUI không bắt buộc để sử dụng SKey.
       </div>
 
       <h2>3. Chạy setup</h2>
@@ -482,7 +548,8 @@ sudo cmake --install build</code></pre>
       <ol class="steps">
         <li>Thêm SKey vào fcitx5 profile làm bộ gõ mặc định</li>
         <li>Bật <code>ActiveByDefault=True</code> và <code>ShareInputState=All</code></li>
-        <li>Export biến môi trường (<code>GTK_IM_MODULE</code>, <code>QT_IM_MODULE</code>, <code>XMODIFIERS</code>...)</li>
+        <li>Export biến môi trường (<code>GTK_IM_MODULE</code>, <code>QT_IM_MODULE</code>, <code>XMODIFIERS</code>...)
+        </li>
         <li>Khởi động lại fcitx5 daemon</li>
         <li>Trên Wayland: tự động reconnect compositor virtual keyboard</li>
         <li>Enable và start uinput server service</li>
@@ -494,28 +561,35 @@ sudo cmake --install build</code></pre>
     <!-- ==================== CẤU HÌNH FCITX5 ==================== -->
     <section id="cau-hinh-fcitx5">
       <h1>Cấu hình Fcitx5</h1>
-      <p>Sau khi cài đặt, <code>skey-setup</code> tự động cấu hình hầu hết mọi thứ. Phần này hướng dẫn thêm cho từng trường hợp X11 và Wayland.</p>
+      <p>Sau khi cài đặt, <code>skey-setup</code> tự động cấu hình hầu hết mọi thứ. Phần này hướng dẫn thêm cho từng
+        trường hợp X11 và Wayland.</p>
 
       <h2>Trên X11</h2>
-      <p>Trên X11, SKey hoạt động ngay sau khi cài đặt mà <strong>không cần cấu hình thêm</strong>. Script <code>skey-setup</code> tự động:</p>
+      <p>Trên X11, SKey hoạt động ngay sau khi cài đặt mà <strong>không cần cấu hình thêm</strong>. Script
+        <code>skey-setup</code> tự động:
+      </p>
       <ul>
-        <li>Export biến môi trường vào <code>~/.profile</code>, <code>~/.xprofile</code>, và shell config (<code>.bashrc</code>/<code>.zshrc</code>/<code>config.fish</code>)</li>
-        <li>Đặt <code>GTK_IM_MODULE=fcitx</code>, <code>QT_IM_MODULE=fcitx5</code>, <code>XMODIFIERS=@im=fcitx</code></li>
+        <li>Export biến môi trường vào <code>~/.profile</code>, <code>~/.xprofile</code>, và shell config
+          (<code>.bashrc</code>/<code>.zshrc</code>/<code>config.fish</code>)</li>
+        <li>Đặt <code>GTK_IM_MODULE=fcitx</code>, <code>QT_IM_MODULE=fcitx5</code>, <code>XMODIFIERS=@im=fcitx</code>
+        </li>
         <li>Khởi động fcitx5 daemon</li>
       </ul>
       <p>Chuyển đổi bộ gõ bằng <kbd>Ctrl</kbd>+<kbd>Space</kbd>.</p>
 
       <div class="alert alert-tip">
         <div class="alert-title">Mẹo</div>
-        Nếu sau khi cài mà không gõ được tiếng Việt trên X11, hãy <strong>logout rồi login lại</strong> để session nhận biến môi trường mới. Hoặc chạy lại <code>skey-setup</code>.
+        Nếu sau khi cài mà không gõ được tiếng Việt trên X11, hãy <strong>logout rồi login lại</strong> để session nhận
+        biến môi trường mới. Hoặc chạy lại <code>skey-setup</code>.
       </div>
 
       <h2>Trên Wayland</h2>
-      <p>Wayland yêu cầu thêm một bước: <strong>chọn Virtual Keyboard là Fcitx 5</strong> trong System Settings. Cách làm tùy theo desktop environment:</p>
+      <p>Wayland yêu cầu thêm một bước: <strong>chọn Virtual Keyboard là Fcitx 5</strong> trong System Settings. Cách
+        làm tùy theo desktop environment:</p>
 
       <h3>KDE Plasma (Kubuntu, KDE Neon, Fedora KDE...)</h3>
       <figure class="screenshot screenshot-inline">
-        <img src="images/kde-virtual-keyboard.png" alt="KDE System Settings — chọn Virtual Keyboard">
+        <img src="images/skey-bo-go-tieng-viet-linux-tot-nhat-kde-virtual-keyboard.png" alt="KDE System Settings — chọn Virtual Keyboard">
         <figcaption>System Settings → Input Devices → Virtual Keyboard → chọn Fcitx 5</figcaption>
       </figure>
       <ol class="steps">
@@ -526,12 +600,13 @@ sudo cmake --install build</code></pre>
       </ol>
       <div class="alert alert-warning">
         <div class="alert-title">Quan trọng</div>
-        Nếu không thấy tuỳ chọn <strong>Fcitx 5</strong> trong danh sách Virtual Keyboard, hãy logout rồi login lại. Cần KDE Plasma ≥ 6.0 (hoặc KDE 5 + <code>fcitx5-frontend-qt5</code>).
+        Nếu không thấy tuỳ chọn <strong>Fcitx 5</strong> trong danh sách Virtual Keyboard, hãy logout rồi login lại. Cần
+        KDE Plasma ≥ 6.0 (hoặc KDE 5 + <code>fcitx5-frontend-qt5</code>).
       </div>
 
       <h3>GNOME (Ubuntu, Fedora Workstation, Zorin OS...)</h3>
       <figure class="screenshot screenshot-inline">
-        <img src="images/gnome-input-sources.png" alt="GNOME Settings — chọn Input Sources">
+        <img src="images/skey-bo-go-tieng-viet-linux-tot-nhat-gnome-input-sources.png" alt="GNOME Settings — chọn Input Sources">
         <figcaption>Settings → Keyboard → Input Sources → thêm Vietnamese (Fcitx 5)</figcaption>
       </figure>
       <ol class="steps">
@@ -542,7 +617,9 @@ sudo cmake --install build</code></pre>
       </ol>
       <div class="alert alert-note">
         <div class="alert-title">Ghi chú</div>
-        Trên GNOME ≥ 45, Fcitx5 hoạt động qua giao thức <code>zwp_input_method_v2</code> mặc định. Script <code>skey-setup</code> không đặt <code>GTK_IM_MODULE</code> trên GNOME/Wayland để tránh xung đột với GTK native text-input.
+        Trên GNOME ≥ 45, Fcitx5 hoạt động qua giao thức <code>zwp_input_method_v2</code> mặc định. Script
+        <code>skey-setup</code> không đặt <code>GTK_IM_MODULE</code> trên GNOME/Wayland để tránh xung đột với GTK native
+        text-input.
       </div>
 
       <h3>Hyprland / Sway / Niri (Tiling WM)</h3>
@@ -658,22 +735,28 @@ echo $XMODIFIERS         # Kết quả: @im=fcitx</code></pre>
       <p>SKey có sẵn tính năng cập nhật ngay trong giao diện — không cần mở terminal:</p>
 
       <ol class="steps">
-        <li>Mở <strong>fcitx5-skey-settings</strong> (từ menu ứng dụng hoặc gõ <code>fcitx5-skey-settings</code> trong terminal)</li>
+        <li>Mở <strong>fcitx5-skey-settings</strong> (từ menu ứng dụng hoặc gõ <code>fcitx5-skey-settings</code> trong
+          terminal)</li>
         <li>Chuyển sang <strong>Tab Info</strong></li>
-        <li>Bấm nút <strong>"Kiểm tra cập nhật"</strong> — ứng dụng sẽ truy vấn GitHub Releases để so sánh phiên bản</li>
-        <li>Nếu có phiên bản mới: hiện dialog với <strong>version + release notes</strong> → bấm <strong>"Cập nhật ngay"</strong></li>
-        <li>Ứng dụng tự động: <strong>tải package</strong> → <strong>cài đặt</strong> (yêu cầu mật khẩu admin) → <strong>chạy skey-setup</strong> → <strong>restart Fcitx5</strong></li>
+        <li>Bấm nút <strong>"Kiểm tra cập nhật"</strong> — ứng dụng sẽ truy vấn GitHub Releases để so sánh phiên bản
+        </li>
+        <li>Nếu có phiên bản mới: hiện dialog với <strong>version + release notes</strong> → bấm <strong>"Cập nhật
+            ngay"</strong></li>
+        <li>Ứng dụng tự động: <strong>tải package</strong> → <strong>cài đặt</strong> (yêu cầu mật khẩu admin) →
+          <strong>chạy skey-setup</strong> → <strong>restart Fcitx5</strong>
+        </li>
         <li>Settings GUI tự khởi động lại với phiên bản mới</li>
       </ol>
 
       <figure class="screenshot screenshot-inline">
-        <img src="images/skey-update.png" alt="SKey Settings — Tab Info với nút Kiểm tra cập nhật">
+        <img src="images/skey-bo-go-tieng-viet-linux-tot-nhat-skey-update.png" alt="SKey Settings — Tab Info với nút Kiểm tra cập nhật">
         <figcaption>Tab Info — Kiểm tra cập nhật và cập nhật trực tiếp từ GUI</figcaption>
       </figure>
 
       <div class="alert alert-tip">
         <div class="alert-title">Mẹo</div>
-        Toàn bộ quy trình chỉ cần bấm 2 nút: <strong>"Kiểm tra cập nhật"</strong> → <strong>"Cập nhật ngay"</strong>. Sau khi cập nhật, bộ gõ sẵn sàng sử dụng ngay.
+        Toàn bộ quy trình chỉ cần bấm 2 nút: <strong>"Kiểm tra cập nhật"</strong> → <strong>"Cập nhật ngay"</strong>.
+        Sau khi cập nhật, bộ gõ sẵn sàng sử dụng ngay.
       </div>
 
       <h2>Cách 2: Từ Terminal</h2>
@@ -764,7 +847,8 @@ echo $XMODIFIERS         # Kết quả: @im=fcitx</code></pre>
           <strong>Logout rồi login lại</strong> để session nhận biến môi trường mới
         </li>
         <li>
-          <strong>Trên Wayland:</strong> Kiểm tra Virtual Keyboard đã chọn <strong>Fcitx 5</strong> chưa (xem <a href="#cau-hinh-fcitx5">Cấu hình Fcitx5</a>)
+          <strong>Trên Wayland:</strong> Kiểm tra Virtual Keyboard đã chọn <strong>Fcitx 5</strong> chưa (xem <a
+            href="#cau-hinh-fcitx5">Cấu hình Fcitx5</a>)
         </li>
         <li>
           <strong>Kiểm tra fcitx5 đang chạy:</strong>
@@ -795,7 +879,8 @@ echo $XMODIFIERS         # Kết quả: @im=fcitx</code></pre>
       <div class="code-block">
         <div class="code-header">
           <span>Terminal</span>
-          <button class="copy-btn" data-code="sudo systemctl enable --now fcitx5-skey-uinput-server@$USER.service">Copy</button>
+          <button class="copy-btn"
+            data-code="sudo systemctl enable --now fcitx5-skey-uinput-server@$USER.service">Copy</button>
         </div>
         <pre><code>sudo systemctl enable --now fcitx5-skey-uinput-server@$USER.service</code></pre>
       </div>
@@ -838,22 +923,78 @@ echo $XMODIFIERS         # Kết quả: @im=fcitx</code></pre>
 
       <table>
         <thead>
-          <tr><th>Gõ</th><th>Kết quả</th><th>Mô tả</th></tr>
+          <tr>
+            <th>Gõ</th>
+            <th>Kết quả</th>
+            <th>Mô tả</th>
+          </tr>
         </thead>
         <tbody>
-          <tr><td><code>aa</code></td><td>â</td><td>Dấu mũ</td></tr>
-          <tr><td><code>oo</code></td><td>ô</td><td>Dấu mũ</td></tr>
-          <tr><td><code>ee</code></td><td>ê</td><td>Dấu mũ</td></tr>
-          <tr><td><code>uw</code> / <code>ww</code></td><td>ư</td><td>Dấu móc</td></tr>
-          <tr><td><code>ow</code></td><td>ơ</td><td>Dấu móc</td></tr>
-          <tr><td><code>aw</code></td><td>ă</td><td>Dấu trăng</td></tr>
-          <tr><td><code>dd</code></td><td>đ</td><td>D đét</td></tr>
-          <tr><td><code>s</code></td><td>dấu sắc</td><td>á, é, ó...</td></tr>
-          <tr><td><code>f</code></td><td>dấu huyền</td><td>à, è, ò...</td></tr>
-          <tr><td><code>r</code></td><td>dấu hỏi</td><td>ả, ẻ, ỏ...</td></tr>
-          <tr><td><code>x</code></td><td>dấu ngã</td><td>ã, ẽ, õ...</td></tr>
-          <tr><td><code>j</code></td><td>dấu nặng</td><td>ạ, ẹ, ọ...</td></tr>
-          <tr><td><code>z</code></td><td>xóa dấu</td><td>bỏ dấu thanh</td></tr>
+          <tr>
+            <td><code>aa</code></td>
+            <td>â</td>
+            <td>Dấu mũ</td>
+          </tr>
+          <tr>
+            <td><code>oo</code></td>
+            <td>ô</td>
+            <td>Dấu mũ</td>
+          </tr>
+          <tr>
+            <td><code>ee</code></td>
+            <td>ê</td>
+            <td>Dấu mũ</td>
+          </tr>
+          <tr>
+            <td><code>uw</code> / <code>ww</code></td>
+            <td>ư</td>
+            <td>Dấu móc</td>
+          </tr>
+          <tr>
+            <td><code>ow</code></td>
+            <td>ơ</td>
+            <td>Dấu móc</td>
+          </tr>
+          <tr>
+            <td><code>aw</code></td>
+            <td>ă</td>
+            <td>Dấu trăng</td>
+          </tr>
+          <tr>
+            <td><code>dd</code></td>
+            <td>đ</td>
+            <td>D đét</td>
+          </tr>
+          <tr>
+            <td><code>s</code></td>
+            <td>dấu sắc</td>
+            <td>á, é, ó...</td>
+          </tr>
+          <tr>
+            <td><code>f</code></td>
+            <td>dấu huyền</td>
+            <td>à, è, ò...</td>
+          </tr>
+          <tr>
+            <td><code>r</code></td>
+            <td>dấu hỏi</td>
+            <td>ả, ẻ, ỏ...</td>
+          </tr>
+          <tr>
+            <td><code>x</code></td>
+            <td>dấu ngã</td>
+            <td>ã, ẽ, õ...</td>
+          </tr>
+          <tr>
+            <td><code>j</code></td>
+            <td>dấu nặng</td>
+            <td>ạ, ẹ, ọ...</td>
+          </tr>
+          <tr>
+            <td><code>z</code></td>
+            <td>xóa dấu</td>
+            <td>bỏ dấu thanh</td>
+          </tr>
         </tbody>
       </table>
 
@@ -861,25 +1002,64 @@ echo $XMODIFIERS         # Kết quả: @im=fcitx</code></pre>
 
       <table>
         <thead>
-          <tr><th>Gõ</th><th>Kết quả</th><th>Gõ</th><th>Kết quả</th></tr>
+          <tr>
+            <th>Gõ</th>
+            <th>Kết quả</th>
+            <th>Gõ</th>
+            <th>Kết quả</th>
+          </tr>
         </thead>
         <tbody>
-          <tr><td><code>1</code></td><td>dấu sắc</td><td><code>6</code></td><td>dấu mũ (â, ê, ô)</td></tr>
-          <tr><td><code>2</code></td><td>dấu huyền</td><td><code>7</code></td><td>dấu móc (ơ, ư)</td></tr>
-          <tr><td><code>3</code></td><td>dấu hỏi</td><td><code>8</code></td><td>dấu trăng (ă)</td></tr>
-          <tr><td><code>4</code></td><td>dấu ngã</td><td><code>9</code></td><td>d đét (đ)</td></tr>
-          <tr><td><code>5</code></td><td>dấu nặng</td><td><code>0</code></td><td>xóa dấu</td></tr>
+          <tr>
+            <td><code>1</code></td>
+            <td>dấu sắc</td>
+            <td><code>6</code></td>
+            <td>dấu mũ (â, ê, ô)</td>
+          </tr>
+          <tr>
+            <td><code>2</code></td>
+            <td>dấu huyền</td>
+            <td><code>7</code></td>
+            <td>dấu móc (ơ, ư)</td>
+          </tr>
+          <tr>
+            <td><code>3</code></td>
+            <td>dấu hỏi</td>
+            <td><code>8</code></td>
+            <td>dấu trăng (ă)</td>
+          </tr>
+          <tr>
+            <td><code>4</code></td>
+            <td>dấu ngã</td>
+            <td><code>9</code></td>
+            <td>d đét (đ)</td>
+          </tr>
+          <tr>
+            <td><code>5</code></td>
+            <td>dấu nặng</td>
+            <td><code>0</code></td>
+            <td>xóa dấu</td>
+          </tr>
         </tbody>
       </table>
 
       <h2>Phím tắt</h2>
       <table>
         <thead>
-          <tr><th>Phím</th><th>Chức năng</th></tr>
+          <tr>
+            <th>Phím</th>
+            <th>Chức năng</th>
+          </tr>
         </thead>
         <tbody>
-          <tr><td><kbd>Ctrl</kbd>+<kbd>Space</kbd></td><td>Bật/tắt bộ gõ tiếng Việt</td></tr>
-          <tr><td><kbd>`</kbd> (backtick)</td><td>Mở menu cấu hình nhanh (chọn chế độ gõ, loại trừ app...)</td></tr>
+          <tr>
+            <td><kbd>Ctrl</kbd>+<kbd>Space</kbd></td>
+            <td>Bật/tắt bộ gõ tiếng Việt</td>
+          </tr>
+          <tr>
+            <td><kbd>`</kbd> (backtick)</td>
+            <td>Mở menu cấu hình nhanh (chọn chế độ gõ, loại trừ app...)</td>
+          </tr>
         </tbody>
       </table>
 
@@ -895,16 +1075,46 @@ echo $XMODIFIERS         # Kết quả: @im=fcitx</code></pre>
       </div>
 
       <p>Hoặc mở từ <strong>menu ứng dụng</strong> → tìm <strong>"SKey Settings"</strong>.</p>
+
+      <h3>Giao diện SKey Settings GUI</h3>
+      <div class="screenshot-grid" style="margin-top: 1rem;">
+        <figure class="screenshot">
+          <img src="images/skey-bo-go-tieng-viet-linux-tot-nhat-settings-general.png" alt="SKey Settings — Tab Chung">
+          <figcaption>Tab Chung: Kiểu gõ, Chế độ xuất, Bảng mã và Phím chuyển</figcaption>
+        </figure>
+        <figure class="screenshot">
+          <img src="images/skey-bo-go-tieng-viet-linux-tot-nhat-settings-apps.png" alt="SKey Settings — Tab Ứng dụng">
+          <figcaption>Tab Ứng dụng: Cấu hình chế độ xuất riêng cho từng app</figcaption>
+        </figure>
+        <figure class="screenshot">
+          <img src="images/skey-bo-go-tieng-viet-linux-tot-nhat-settings-shortcuts.png" alt="SKey Settings — Tab Gõ tắt">
+          <figcaption>Tab Gõ tắt: Quản lý danh sách từ viết tắt và tùy chọn macro</figcaption>
+        </figure>
+        <figure class="screenshot">
+          <img src="images/skey-bo-go-tieng-viet-linux-tot-nhat-settings-appearance.png" alt="SKey Settings — Tab Giao diện">
+          <figcaption>Tab Giao diện: Tùy chỉnh biểu tượng hiển thị trên khay hệ thống</figcaption>
+        </figure>
+        <figure class="screenshot">
+          <img src="images/skey-bo-go-tieng-viet-linux-tot-nhat-settings-info.png" alt="SKey Settings — Tab Info">
+          <figcaption>Tab Info: Kiểm tra cập nhật, thông tin phiên bản và Sao lưu / Khôi phục</figcaption>
+        </figure>
+      </div>
     </section>
 
     <!-- Footer -->
-    <footer style="text-align: center; padding: 2rem 0; margin-top: 2rem; border-top: 1px solid var(--border); color: var(--text-secondary); font-size: 0.85rem;">
-      <p>SKey — Simple Key for Linux · Phát hành theo giấy phép <a href="https://github.com/collyn/skey/blob/main/LICENSE" target="_blank" rel="noopener">MIT</a></p>
-      <p style="margin-top: 0.5rem;">Engine: <a href="https://github.com/nguyen10t2/bamboo_core" target="_blank" rel="noopener">bamboo-core</a> · Framework: <a href="https://fcitx-im.org/" target="_blank" rel="noopener">Fcitx5</a></p>
+    <footer
+      style="text-align: center; padding: 2rem 0; margin-top: 2rem; border-top: 1px solid var(--border); color: var(--text-secondary); font-size: 0.85rem;">
+      <p>SKey — Simple Key for Linux · Phát hành theo giấy phép <a
+          href="https://github.com/collyn/skey/blob/main/LICENSE" target="_blank" rel="noopener">MIT</a></p>
+      <p>Version hiện tại: <span id="skey-version" data-skey-version>v0.5.3</span> </p>
+      <p style="margin-top: 0.5rem;">Engine: <a href="https://github.com/nguyen10t2/bamboo_core" target="_blank"
+          rel="noopener">bamboo-core</a> · Framework: <a href="https://fcitx-im.org/" target="_blank"
+          rel="noopener">Fcitx5</a></p>
     </footer>
 
   </main>
 
-  <script src="script.js"></script>
+  <script type="module" src="script.js"></script>
 </body>
+
 </html>
