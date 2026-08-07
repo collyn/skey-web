@@ -85,7 +85,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Typography */
+/* Typography & Heading Hierarchy */
 h1 {
   font-size: 1.85rem;
   font-weight: 700;
@@ -104,6 +104,32 @@ h3 {
   font-size: 1.1rem;
   font-weight: 600;
   color: var(--text);
+}
+
+.main-content section > h1,
+.main-content section > h2 {
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
+}
+
+.main-content section h3 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: -0.01em;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.main-content section h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
 }
 
 section {
@@ -183,7 +209,8 @@ section ol li {
   display: block;
 }
 
-.sidebar-header h1 {
+.sidebar-header h1,
+.sidebar-header .sidebar-title {
   color: #ffffff;
   font-size: 1.35rem;
   font-weight: 700;
