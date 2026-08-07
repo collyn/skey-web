@@ -165,7 +165,7 @@ section ol li {
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(180deg, #0b1329 0%, #0f172a 45%, #15203b 100%);
+  background: linear-gradient(135deg, #162447 0%, #0f172a 50%, #080d1a 100%);
   border-right: 1px solid var(--sidebar-border);
   z-index: 100;
 }
