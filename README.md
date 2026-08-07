@@ -13,7 +13,6 @@
 
 ## 🚀 Tính năng của Web Hướng Dẫn
 
-- **Thử nghiệm gõ tiếng Việt trực tiếp:** Hỗ trợ thử nghiệm các kiểu gõ Telex, VNI,... ngay trên trình duyệt.
 - **Hướng dẫn cài đặt & cấu hình:** Chi tiết các bước thiết lập `skey` trên các hệ điều hành.
 - **Tra cứu phím tắt & tính năng:** Danh sách đầy đủ các phím tắt, bảng mã và tùy chọn của `skey`.
 
@@ -33,11 +32,13 @@
 
 ## 💻 Phát triển cục bộ (Local Development)
 
-Không cần cài đặt phức tạp, bạn có thể chạy trực tiếp file `index.html` trên trình duyệt hoặc sử dụng các công cụ tạo local server như `Live Server` (VS Code) hoặc `npx serve`:
+Yêu cầu đã cài đặt [Bun](https://bun.sh/).
+
+Bạn có thể chạy server phát triển cục bộ bằng Bun:
 
 ```bash
-# Hoặc chạy với npx serve
-npx serve .
+# Chạy static server bằng Bun
+bun x serve .
 ```
 
 ---
